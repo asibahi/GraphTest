@@ -5,6 +5,7 @@ using System.Text;
 
 namespace GraphTest
 {
+	// Immutable graph pls
 	interface IGraph<T> : IEnumerable<T>
 	{
 		// Add a Node
@@ -28,12 +29,7 @@ namespace GraphTest
 		// Whether an Item exists or not
 		bool Contains(T item);
 
-		// Removes item from Graph
-		bool Remove(T item);
-
-		
-
 		// Supply a Node or an Item and get Adjacent Nodes
-		IList<INode<T>> GetAdjacentNodes(INode<T> node);
+		IEnumerable<INode<T>> GetAdjacentNodes(INode<T> node);
 	}
 }
