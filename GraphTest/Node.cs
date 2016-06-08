@@ -1,18 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GraphTest
 {
-	public class Node<T>
+	public class Node<T> : INode
 	{
-		T Item { get; set; }
+		public T Item { get; }
+		public Guid Id { get; }
 
-		public Node(T item)
+		Node()
+		{
+			Id = Guid.NewGuid();
+		}
+
+		public Node(T item) : this()
 		{
 			Item = item;
+		}
+
+		public Node(Node<T> node) : this()
+		{
+			Item = node.Item;
 		}
 	}
 }

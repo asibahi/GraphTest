@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace GraphTest
 {
-	interface IEdge<T>
+	public interface IEdge
 	{
+		INode FromNode { get; }
+		INode ToNode { get; }
+
+		bool IsDirected { get; }
 	}
 }

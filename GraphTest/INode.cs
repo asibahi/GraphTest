@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GraphTest
 {
-	interface INode<T>
+	public interface INode
 	{
 	}
 }
