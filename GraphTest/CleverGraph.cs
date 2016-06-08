@@ -10,7 +10,7 @@ namespace GraphTest
         public CleverGraph() : this(EqualityComparer<T>.Default) { }
         public CleverGraph(IEqualityComparer<T> comparer)
         {
-            Comparer = comparer != null ? comparer : EqualityComparer<T>.Default;
+            Comparer = comparer ?? EqualityComparer<T>.Default;
             DataStorage = new Dictionary<T, HashSet<T>>(comparer);
         }
 
