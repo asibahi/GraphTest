@@ -40,14 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CleverGraph.cs" />
-    <Compile Include="Edge.cs" />
-    <Compile Include="ICleverGraph.cs" />
-    <Compile Include="StupidGraph.cs" />
-    <Compile Include="IEdge.cs" />
-    <Compile Include="IGraph.cs" />
-    <Compile Include="INode.cs" />
-    <Compile Include="Node.cs" />
+    <Compile Include="GoodGraph\CleverGraph.cs" />
+    <Compile Include="BadGraph\Edge.cs" />
+    <Compile Include="GoodGraph\ICleverGraph.cs" />
+    <Compile Include="BadGraph\StupidGraph.cs" />
+    <Compile Include="BadGraph\IEdge.cs" />
+    <Compile Include="BadGraph\IGraph.cs" />
+    <Compile Include="BadGraph\INode.cs" />
+    <Compile Include="BadGraph\Node.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
