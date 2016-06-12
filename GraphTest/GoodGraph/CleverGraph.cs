@@ -7,14 +7,14 @@ namespace GraphTest
 {
     public class CleverGraph<T> : ICleverGraph<T>
     {
-        public CleverGraph() : this(EqualityComparer<T>.Default) { }
+        public CleverGraph() : this(null) { }
         public CleverGraph(IEqualityComparer<T> comparer)
         {
             Comparer = comparer ?? EqualityComparer<T>.Default;
             DataStorage = new Dictionary<T, HashSet<T>>(comparer);
         }
 
-        IEqualityComparer<T> Comparer { get; }
+        public IEqualityComparer<T> Comparer { get; }
         Dictionary<T, HashSet<T>> DataStorage { get; }
 
         public IEnumerable<T> Nodes => DataStorage.Keys;
